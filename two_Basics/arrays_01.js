@@ -34,22 +34,28 @@
  // slice , splice 
 
 // =================Slice=====================================================
-const arr1=[1,2,3,4,5];
-let myslice=arr1.slice(0,3);
+// const arr1=[1,2,3,4,5];
+// let myslice=arr1.slice(0,3);
 
-console.log("A","->",myslice);
-console.log(arr1.length);
+// console.log("A","->",myslice);
+// console.log(arr1.length);
 
 
 // ====================Splice======================================================
-const arr2=[1,2,3,4,5];
-let myslic=arr2.splice(0,3);
+// const arr2=[1,2,3,4,5];
+// let myslic=arr2.splice(0,3);
 
-console.log("B","->",myslic);
-console.log(arr2.length);
+// console.log("B","->",myslic);
+// console.log(arr2.length);
 
 
 
+// ==========================join===============================
+
+// const arr=[1,2,3,4,5,6];
+// let myarr=arr.join();
+
+// console.log(myarr);
 
 
 
