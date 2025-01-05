@@ -16,7 +16,7 @@ Object ka prototype banata hai
     
 // }
 
-let student=Object.create(teacher);
+// let student=Object.create(teacher);
 
 // console.log(student.fun());
 // console.log(student["cast"]);
@@ -56,15 +56,18 @@ dic.greet=function(){
 
 dic.greetTwo=function(){
 
-    console.log(`My name is ${this.name} kashyap`);// Variable interpolation
+    // console.log(`My name is ${this.name} kashyap`);// Variable interpolation
     
 }
 
 console.log(dic.greetTwo());
 
 
+// ===================================================================================
 
+const ob=new Object();
 
+console.log(ob);
 
 
 
