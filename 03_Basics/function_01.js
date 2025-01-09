@@ -89,3 +89,15 @@
 
 // let res=myfun(array);
 // console.log(res);
+
+
+
+function myfun(){
+    let val=110;
+    console.log(this);
+    // console.log(this.val);
+    console.log(val);  
+    
+}
+
+myfun()

@@ -63,6 +63,8 @@
 
 // ++++++++++++++++++++++++++++++++Interesting Concepts ++++++++++++++++++++++++++++++
 
+// That is a the concept of Hoisting
+
 // myfun()
 // function myfun(){
 //     console.log("radhe radhe");
