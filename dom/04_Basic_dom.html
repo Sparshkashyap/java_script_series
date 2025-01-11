@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body style="color: white; background-color: black;">
+   <ul class="ul">
+    <li class="lii">javascript</li>
+   </ul> 
+</body>
+<script>
+// ==========================================================================================
+    // function addElement(element){
+    //     const val=document.createElement('li');
+    //     val.innerHTML=`${element}`;
+    //     const ad=document.querySelector('.ul');
+    //     ad.appendChild(val);
+    // }
+
+    // addElement("python")
+    // addElement("java")
+    // addElement("golang")
+
+
+    function addElement(element){
+        const val=document.createElement("li");
+        val.appendChild(document.createTextNode(`${element}`));
+
+        const ad=document.querySelector('.ul');
+        ad.appendChild(val);
+        
+    }
+   
+    addElement("java");
+    addElement("python")
+    addElement("golang")
+
+//+++++++++++++++++createElement()++++++++++++++++++++++++++++++++++++++++++++++++++++++
+    // const secondlang=document.querySelector('li:nth-child(3)');
+    // // console.log(secondlang);
+    // const res=document.createElement('li');
+    // res.innerHTML="sp"
+    // secondlang.replaceWith(res)
+
+//++++++++++++++++++++++Edit()+++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+    // const secondlang=document.querySelector('li:first-child');
+    // secondlang.outerHTML='<li>TypeScript</li>'
+
+//+++++++++++++++++++remove()++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+//  const thirdlang=document.querySelector('li:nth-child(3)');
+// //  console.log(thirdlang);
+// thirdlang.remove()
+ 
+
+// const take=document.querySelector('.ul');
+// const cr=document.createElement('li');
+// cr.appendChild(document.createTextNode("sparsh Script"));
+// take.appendChild(cr);
+// cr.style.color="pink";
+// cr.style.fontFamily="cursive"
+// // console.log(take);
+
+
+</script>
+</html>
