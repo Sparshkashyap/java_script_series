@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JavaScript_Project</title>
+</head>
+<style>
+    .h1{
+        /* border: 5px; */
+        padding: 7rem;
+        padding-left:12rem;
+        font-size: 3rem;
+
+        /* padding-top: 5rem; */
+        margin-top: 5rem;
+        /* font-size: 10px; */
+        /* border-style: solid; */
+        /* border-color: black; */
+        font-family: cursive;
+        /* background:-webkit-linear-gradient(pink,white,lightblue,lightgreen); */
+       
+    }
+    #button1,#button2,#button3,#button4{ 
+
+        /* padding-left:12rem; */
+        
+        border: 8px;
+        font-size: larger;
+        justify-content: center;
+        padding:1rem;
+        border-color: black;
+        border-style: solid;
+        border-radius: 8rem;
+        /* justify-items: center; */
+    }
+    .div1{
+        /* border: 5px; */
+        padding: 8px;
+        padding-left: 17rem;
+        margin-top: 65rem;
+        /* border-color: black; */
+        /* border-style: solid; */
+        border-radius: 2px;
+        /* background:-webkit-linear-gradient(pink,white,lightblue,lightgreen); */
+        
+        
+
+    }
+    
+</style>
+<body class="body" style="background-color: rgb(1, 0, 0);">
+    <div class="h1" style="color: rgb(0, 0, 0);">
+        <h1 >Color Changer</h1>
+    </div>
+
+        <div class="div1">
+            <button id="button1" style="background-color: pink;">
+              button1
+            </button>
+            <button id="button2" style="background-color: greenyellow">
+              button2
+            </button>
+            <button id="button3" style="background-color: lightgray">
+                button3
+            </button>
+            <button id="button4" style="background-color: lightskyblue">
+              button4
+            </button>
+        </div>
+    
+
+    <script>
+
+        const button=document.querySelectorAll('.div1');
+        const body=document.querySelector('.body');
+        // console.log(button); 
+        // console.log(body);
+
+        button.forEach((val)=>{
+            // console.log(val);
+
+            val.addEventListener('click',function(e){
+
+                console.log(e.target);
+
+                if(e.target.id==="button1"){
+                    body.style.backgroundColor="pink"
+
+                }
+                if(e.target.id==="button2"){
+                    body.style.backgroundColor="greenyellow"
+                }
+                if(e.target.id==="button3"){
+                    body.style.backgroundColor="lightgray"
+                }
+                if(e.target.id==="button4"){
+                    body.style.backgroundColor="lightskyblue"
+                }
+                
+
+            })
+
+
+
+
+
+
+        });
+
+
+
+        
+        
+
+    </script>
+</body>
+</html>
