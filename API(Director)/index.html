@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+
+    <script>
+
+        async function callAPI(){
+ 
+         let c= await fetch('https://jsonplaceholder.typicode.com/users');
+         let p= await c.json();
+         console.warn(p);
+         document.getElementById('user').innerHTML=p.map((t)=>( 
+
+        `
+        <tr>
+            <td>${t.id}</td>
+            <td>${t.name}</td>
+            <td>${t.username}</td>
+            <td>${t.email}</td>
+            <td>${t.email}</td>
+        </tr>`
+         )).join("");
+
+        
+        //  console.warn(p[1].name);
+    }
+ 
+    callAPI();
+ 
+ 
+     </script>
+     
+     <style>
+       #us{
+        /* height:200px; */
+        width:44rem;
+        text-align: left;
+       }
+     </style>
+</head>
+<body>
+    <h1>API ka through data parapth karna</h1>
+    <table  id="us" border=1>
+        <thead>
+       <tr>
+         <th>Id</th>
+         <th>Name</th>
+         <th>UserName</th>
+         <th>Email</th>
+         <th>Address</th>
+       </tr>
+        </thead>
+        
+     </table>
+    <table  id="user" border=1>
+     
+       
+    </table>
+    
+    
+</body>
+</html>

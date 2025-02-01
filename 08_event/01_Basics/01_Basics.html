@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Events</title>
+    <style>
+
+        #body{
+            background-color: black;
+           color: white;
+        }
+
+        #M{
+            /* width: 20rem; */
+            height: 24.7rem;
+
+        }
+        #S{
+            height: 20rem;
+        }
+        #h1{
+            padding-left: 5rem;
+        }
+
+        #images{
+        
+            list-style: none;
+        }
+
+
+    </style>
+</head>
+
+<body  id="body">
+    <!-- <div id="box">
+        <button id="b">Button</button> 
+    </div> -->
+    <h1 id="h1">AI Images</h1>
+    <ul id="images">
+        <li><img src="Success.jpg" alt="(open in new tab)" id="S"></a></li>
+        <li><img src="Motivation.jpg" alt="" id="M"></a></li>
+    </ul>
+</body>
+<script>
+
+// document.getElementById('b').onclick=function(){
+//     alert("Radhe Radhe");
+// }
+
+// document.querySelector('#b').addEventListener('click',function(){
+//     alert("Radhe Radhe");
+// })
+
+// const button= document.getElementById('b');
+
+// button.addEventListener('click',function(e){
+//     alert("Radhe Radhe");
+//     console.log(e);
+    
+// },true);
+
+// =================================================================================================
+
+const button =document.getElementById('images');
+
+button.addEventListener('click',function(e){
+
+    console.log(e.target.id);
+
+    if(e.target.id=="S"){
+        const r=document.getElementById('S');
+        r.remove();
+    }
+    else{
+        const ri=document.getElementById('M');
+        ri.remove();
+    }
+    
+
+   
+
+})
+
+// console.log(button.childNodes);
+
+
+
+</script>
+</html>

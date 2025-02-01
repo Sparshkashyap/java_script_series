@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+<style>
+    #topdiv{
+        /* height: 5rem;
+        width: 10rem; */
+        background-color: aqua;
+        font-family: cursive;
+        font-size: 3rem;
+        padding:1rem;
+    }
+
+    #middlediv{
+        /* height: 3rem;
+        width: 8rem; */
+        background-color: lightcoral;
+        font-family: cursive;
+        font-size: 2rem;
+        padding:0.6rem;
+    }
+
+    #lowerdiv{
+        /* height: 1rem;
+        width: 6rem; */
+        background-color: lightskyblue;
+        font-family: cursive;
+        font-size: 1.5rem;
+        padding:0.3rem;
+
+
+    }
+
+</style>
+
+<script>
+
+    function topdiv(){
+
+        alert('This is Top Tag')
+    }
+    function middlediv(){
+      
+        alert('This is Middle Tag')
+        event.stopImmediatePropagation();
+        
+    }
+    function lowerdiv(){
+
+        alert('This is lower Tag')
+        event.stopPropagation();
+    }
+    
+
+
+
+</script>
+
+</head>
+<body style="font-family: verdana;">
+    <h1 id="h1" style="font-size: 3rem;">Event bubbling</h1>
+    <div id="topdiv" onclick="topdiv()">
+        TOP DIV
+        <div id="middlediv" onclick="middlediv()">
+            MIDDLE DIV
+            <div id="lowerdiv" onclick="lowerdiv()">
+                LOWER DIV
+            </div>
+        </div>
+    </div>
+    
+</body>
+</html>

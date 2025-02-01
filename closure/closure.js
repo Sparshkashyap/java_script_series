@@ -1,3 +1,4 @@
+let name="radheradhe";
 
 function outerfunction(){
 
@@ -7,11 +8,11 @@ function outerfunction(){
         console.log(name);
     }
 
-    return innerfunction;
+    return innerfunction; // function reference
 }
 
 
 let myclosure=outerfunction();
-myclosure()
-// console.log(myclosure());
+// myclosure()
+console.log(myclosure);
 

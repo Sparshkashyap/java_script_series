@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    
+    <title>open_camera</title>
+</head>
+
+<body style="background-color: black;">
+
+    
+    <video id="video"></video>
+    <img src="" style="display: none;" id="img">
+    <canvas id="canvas" style="display: none;"></canvas>
+    <button id="capturebtn">Click me</button>
+
+    <script>
+
+        const img=document.getElementById('img');
+        const video=document.getElementById('video');
+        const canvas=document.getElementById('canvas');
+        const capturebtn=document.getElementById('capturebtn');
+
+        async function startcam(){
+
+        // On the camera 
+            try{
+
+                const stream=await navigator.mediaDevices.getUserMedia({video:true});
+                video.srcObject=stream;
+                video.play();
+
+            }
+            catch(e){
+                console.log("Error is occur"+e);  
+            }
+
+            // Capture the image click on screen
+
+            video.addEventListener("click",()=>{
+
+                canvas.width=video.videoWidth;
+                canvas.height=video.videoHeight;
+                const context=canvas.getContext("2d");
+                context.drawImage(video,0,0,canvas.width,canvas.height);
+                img.src=canvas.toDataURL('image/png');
+                img.style.display="block";
+
+            });
+                
+
+            
+
+            // Capture the image
+            capturebtn.addEventListener('click',()=>{
+           
+                
+                canvas.width=video.videoWidth;
+                canvas.height=video.videoHeight;
+                const context=canvas.getContext("2d");
+                context.drawImage(video,0,0,canvas.width,canvas.height);
+                img.src=canvas.toDataURL('image/png');
+                img.style.display="block";
+
+
+
+
+            })
+
+        }
+
+        startcam();
+
+
+    </script>
+    
+</body>
+</html>
