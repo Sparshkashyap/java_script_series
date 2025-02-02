@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color: black;
+        color: aliceblue;
+        font-family: segoe UI;
+    }
+    #p{
+        font-size: 4rem;
+    }
+    .div1{
+        height:10rem;
+        width: 10rem;
+        padding: 5px;
+        background-color: aqua;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        font-size: 3rem;
+    }
+    .div2{
+        height:10rem;
+        width: 10rem;
+        padding: 5px;
+        background-color: lightgreen;
+        color: rgb(5, 5, 4);
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        font-size: 3rem;
+    }
+    .div3{
+        height:10rem;
+        width: 10rem;
+        padding: 5px;
+        background-color:lemonchiffon ;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        font-size: 3rem;
+    }
+    .outerdiv{
+        height:10rem;
+        width: 10rem;
+        padding: 5px;
+        background-color:lightseagreen;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        font-size: 3rem;
+    }
+    .outerdiv{
+        height:10rem;
+        width: 10rem;
+        padding: 5px;
+        background-color:lightseagreen;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        font-size: 3rem;
+    }
+    .innerdiv{
+        height:7rem;
+        width: 7rem;
+        padding: 5px;
+        background-color:lightslategray;
+        color: black;
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        font-size: 1.5rem;
+    }
+
+    .parent{
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+        gap:1rem;
+    }
+</style>
+<body>
+    <h1 id="p">MUTATION OBSERVER</h1>
+    <div class="parent" id="elem">
+        <div contenteditable="" class="div1"> DIV1</div>
+        <div class="div2">DIV2</div>
+        <div class="div3">DIV3</div>
+        <div class="outerdiv" id="outer">
+            <div class="innerdiv">DIVINNER</div>
+        </div>
+    </div>
+    <button onclick="deletediv()">Delete DIV</button>
+    <button onclick="innerdiv()">Inner DIV</button>
+    <button onclick="updatediv()">UpdateContent DIV</button>
+    <button onclick="updatevalue()">UpdateValue DIV</button>
+    <script>
+        const obj=new MutationObserver((data)=>{
+    console.warn(data[0]);
+    
+})
+
+obj.observe(elem,{
+    childList:true,
+    subtree:true,
+    attributes:true,
+    MutationObserver:true
+   
+});
+
+function deletediv(){
+    document.getElementById('elem').children[0].remove();
+    console.log("sparsh");
+    
+};
+
+function innerdiv(){
+    document.getElementById('outer').children[0].remove();
+}
+
+function updatediv(){
+    document.getElementById('elem').children[0].className="div2";
+}
+function updatevalue(){
+    document.getElementById('elem').children[0].textContent="apple";
+}
+
+</script>
+       
+</body>
+</html>

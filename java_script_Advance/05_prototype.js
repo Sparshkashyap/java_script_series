@@ -42,7 +42,7 @@ let student={
     name:"sparsh",
     Lname:"kashyap",
     birth:2004,
-    // getAge:user.getAge  
+    getAge:user.getAge  // force fully inherit karna
     
 }
 
@@ -55,3 +55,4 @@ let student={
 
 
 
+console.log(student.getAge());

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Shadow DOM</title>
+<style>
+    .error{
+        color-scheme:black;
+    }
+
+</style>
+
+<style>
+.error{
+    color: palevioletred;
+}
+
+</style>
+</head>
+
+<body style="background-color: white; font-family: Segoe UI; color: #000000;">
+
+    <h1 style="color:white; background: linear-gradient(to bottom, #000000, #4B0082); font-size:8rem;">Shadow DOM</h1>
+    <input type="range">
+    <p class="error" contenteditable> Some error has occur</p>
+    <custom-element id="h2"></custom-element> 
+
+     <sp-tag data="This is a custom Tag"></sp-tag>
+     <script src="shadow_DOM.js">
+     </script>
+</body>
+
+
+</html>
